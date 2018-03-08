@@ -15,7 +15,7 @@ def xgb_single_model(method):
     test_data = pd.read_csv('../data/test_data.csv',encoding = 'gbk')
     label = pd.read_csv('../data/label.csv',encoding = 'gbk')
     
-    if method == 'bagging': #性能一般，可能是因为数据集太小了
+    if method == 'ensamble': #
         dtr   = np.array(train_data.values)
         lb_tr = np.array(label.iloc[0:len(dtr)].values)
         lb_te = np.array(label.iloc[len(dtr):].values)
